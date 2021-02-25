@@ -60,10 +60,45 @@ class _DataPageState extends State<DataPage> {
                                           child: Card(
                                             child: Column(
                                               children: [
-                                                Text(value[index]
-                                                        .positive
-                                                        .toString() ??
-                                                    "aaaaa")
+                                                Row(
+                                                  children: [
+                                                    Text(
+                                                        S.of(context).positive +
+                                                            " : "),
+                                                    Text(value[index]
+                                                            .positive
+                                                            .toString() ??
+                                                        S
+                                                            .of(context)
+                                                            .notavailable),
+                                                  ],
+                                                ),
+                                                Row(
+                                                  children: [
+                                                    Text(
+                                                        S.of(context).negative +
+                                                            " : "),
+                                                    Text(value[index]
+                                                            .negative
+                                                            .toString() ??
+                                                        S
+                                                            .of(context)
+                                                            .notavailable),
+                                                  ],
+                                                ),
+                                                Row(
+                                                  children: [
+                                                    Text(
+                                                        S.of(context).negative +
+                                                            " : "),
+                                                    Text(value[index]
+                                                            .negative
+                                                            .toString() ??
+                                                        S
+                                                            .of(context)
+                                                            .notavailable),
+                                                  ],
+                                                ),
                                               ],
                                             ),
                                           ),
@@ -86,7 +121,9 @@ class _DataPageState extends State<DataPage> {
                   padding: const EdgeInsets.all(8.0),
                   child: TextFormField(
                     onChanged: (search) => value.search(search),
-                    decoration: InputDecoration(labelText: S.of(context).next),
+                    decoration: InputDecoration(
+                      labelText: S.of(context).search,
+                    ),
                   ),
                 ),
               ),
