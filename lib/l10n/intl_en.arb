@@ -1,0 +1,18 @@
+{
+    "helloWorld": "Hello World!",
+    "@helloWorld": {
+      "description": "The conventional newborn programmer greeting"
+    },
+    "Test": "Technical Test",
+    "@Test": {
+      "description": "Technical Test"
+    },
+    "next":"Next",
+    "@next":{
+        "description": "next"
+    },
+    "search":"search",
+    "@search":{
+        "description": "search"
+    }
+  }
